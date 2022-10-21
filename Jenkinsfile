@@ -27,7 +27,7 @@ pipeline{
         stage("Deploy"){
             steps{
                 bat "mvn package"
-                deploy adapters: [tomcat9(credentialsId: '39484b5f-6890-49f2-8e3f-faccaf60a90d', path: '', url: 'http://localhost:5050/')], contextPath: 'JenkinsDemo', war: '**/*.war'
+                deploy adapters: [tomcat9(credentialsId: '39484b5f-6890-49f2-8e3f-faccaf60a90d', path: '', url: 'http://localhost:5050/')], contextPath: 'JenkinsDemoV2', war: '**/*.war'
                 }
         }
     }
